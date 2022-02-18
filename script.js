@@ -4,6 +4,7 @@ const revealButton = document.querySelector("#reveal-button")
 const titleSection = document.querySelector(".title-section")
 const infoSection = document.querySelector(".info-section")
 const projectDivs = document.querySelectorAll(".project-div")
+const titleParagraph = document.querySelector("#title-paragraph")
 
 function showNav(event) {
     console.log(navMenu)
@@ -15,10 +16,15 @@ function showNav(event) {
 }
 
 function showInfoSection(event) {
-    if (titleSection.className === "title-section") {
-        titleSection.className = "title-section-expand"
+    let screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width
+    if (titleParagraph.id === "title-paragraph" || titleParagraph.id === "title-paragraph-unexpand") {
+        if (screenWidth < 1125) titleSection.className = "title-section-expand"
+        titleParagraph.id = "title-paragraph-expand"
+        revealButton.id = "revealed-button"
     } else {
-        titleSection.className = "title-section"
+        if (screenWidth < 1125) titleSection.className = "title-section-unexpand"
+        titleParagraph.id = "title-paragraph-unexpand"
+        revealButton.id = "re-reveal-button"
     }
 }
 
