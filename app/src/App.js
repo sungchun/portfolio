@@ -1,15 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
+import Menu from "./components/Menu";
+import Links from "./components/Links";
+import Display from "./components/Display"
 
 function App() {
+  const [info, setInfo] = useState({})
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/work"  element={<Work/>}/>      
-        <Route path="/info" element={<Info/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-      </Routes>
-    </Router>
+    <>
+      <Links/>
+      <Display info={info}/>
+      <Menu setInfo={setInfo}/>
+    </>
   )
 }
 
