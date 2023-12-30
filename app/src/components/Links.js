@@ -1,9 +1,9 @@
 function Links() {
     return (
         <div>
-            <img/>
-            <img/>
-            <img/>
+            <a href=""><img/></a>
+            <a href=""><img/></a>
+            <a href=""><img/></a>
         </div>
     );
 }

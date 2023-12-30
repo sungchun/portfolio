@@ -1,9 +1,12 @@
-function Display() {
+import projects from "../projects"
+
+function Display(info) {
     return (
         <div>
-           <h2></h2> 
-           <a></a>
-           <p></p>
+           <h2>{projects[{info}]["title"]}</h2> 
+           <img src={projects[{info}]["image"]}/>
+           <a>{projects[{info}]["link"]}</a>
+           <p>{projects[{info}]["desctription"]}</p>
         </div>
     )
 }
