@@ -1,4 +1,7 @@
 export const projects = {
+    "about":{
+
+    },
     "shipwrecked": {
         "title": "Shipwrecked",
         "image": "app\src\assets\projects\shipwrecked.png",
