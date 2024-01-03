@@ -1,7 +1,10 @@
 function Menu({setInfo}) {
 
     function changeInfo(Event){
-        setInfo(Event.target.value)
+        const val = Event.target.innerHTML
+        console.log(val);
+        setInfo(String(val.toLowerCase()))
+        console.log('click')
     }
 
     return (

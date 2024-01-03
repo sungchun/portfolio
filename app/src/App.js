@@ -4,7 +4,7 @@ import Links from "./components/Links";
 import Display from "./components/Display"
 
 function App() {
-  const [info, setInfo] = useState({})
+  const [info, setInfo] = useState("")
   return (
     <>
       <Links/>
