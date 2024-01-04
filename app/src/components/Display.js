@@ -11,7 +11,7 @@ function Display({info}) {
                 <div>
                    <h2>{projects[info]["title"]}</h2> 
                    <img src={require(`${projects[info]["image"]}`)}/>
-                   <a>{projects[info]["link"]}</a>
+                   <a href={projects[info]["link"]}>Link</a>
                    <p>{projects[info]["desctription"]}</p>
                 </div>
             ):(<div>
